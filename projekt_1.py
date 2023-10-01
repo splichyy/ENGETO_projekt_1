@@ -118,11 +118,11 @@ if not max_word % 2:
     max_word += 1
 
 print(f"LEN|{' ' * int(max_word / 2)}OCCURENCES{' ' * int(max_word / 2)}|NR. \
-      \n {sep}")
+      \n{sep}")
 
 # vypsání grafu
 for lenght, count in sorted(word_lenghts.items()):
     if lenght <= 9:
-        print("", lenght,"|", '*' * count, " " * (max_word - count + 6), "|",count)
-    else:
-        print(lenght,"|", '*' * count, " " * (max_word - count + 6), "|",count)
+        print(" ",end="")
+    print(f" {lenght}|{'*' * count} {' ' * (max_word - count + 7)} |{count}")
+
