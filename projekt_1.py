@@ -84,7 +84,7 @@ num_count = 0
 num_sum = 0
 for word in clean_words:
     if word.istitle():
-        title_count = title_count + 1
+        title_count += 1
     elif word.isupper() and word.isalpha():
         upper_count += 1
     elif word.islower() and word.isalpha():
@@ -105,7 +105,6 @@ The sum of all the numbers {num_sum}. \n{sep}"
 # rozdělení slov
 word_lenghts = {}
 for word in clean_words:
-    word = word.strip(".,:;!?_@")
     lenght = len(word)
     if lenght not in word_lenghts:
         word_lenghts[lenght] = 1
